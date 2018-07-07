@@ -12,7 +12,7 @@ Antes de instalar o analise-sentiment você precisará:
 ## Instalando
 
 ```sh
-pip install analise-sentiment
+pip install analisador-de-sentimentos
 ```
 
 ## Uso
@@ -20,7 +20,7 @@ pip install analise-sentiment
 Após a instalção, simplesmente digite:
 
 ```sh
-analise-sentiment
+analisador-de-sentimentos
 ```
 
 ## Contribuindo
@@ -44,5 +44,5 @@ Ao contribuir para este repositório, discuta as mudanças via Issue, e-mail, ou
 
 ## Licença
 
-Distrubuido sobre a licensa AGPL 3.0. Veja ``LICENSE`` para mais informações.
+Distribuido sobre a licensa AGPL 3.0. Veja ``LICENSE`` para mais informações.
 
