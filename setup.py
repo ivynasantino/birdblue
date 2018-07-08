@@ -3,16 +3,17 @@
 
 from setuptools import setup
 
-setup(name='analisador-sentimentos',
-      version='0.1',
+setup(name='analisador-de-sentimentos',
+      version='0.0.1',
       description='Analisador de sentimentos do twitter',
       author='Ivyna Santino, Pedro Espíndula',
       author_email='ivyna.alves@ccc.ufcg.edu.br',
       url='',
-      packages=['analisador-sentimentos'],
+      packages=['analisador-de-sentimentos'],
       install_requires=[
           'textblob',
-          'tweepy'
+          'tweepy',
+          'numpy'
           ],
-      scripts=['bin/analise_sentiment'],
+      scripts=['bin/analisador-de-sentimentos'],
       )
