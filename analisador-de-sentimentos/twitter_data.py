@@ -4,10 +4,13 @@ import tweepy
 import json
 
 
-def trending_topics(api):
+# API.trends_available()
+def tweets_tts(api):
+    "Procura tweets baseados nos TTs"
     pass
 
 
+# API.search(kw[, lang][, locale][, rpp][, page][, since_id][, geocode][, show_user])
 def tweets_palavra(api, palavra_chave):
     "Procura tweets sobre uma palavra_chave"
     tweets = []
