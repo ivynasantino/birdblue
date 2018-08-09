@@ -1,5 +1,7 @@
 # coding: utf-8
 
+from __future__ import print_function, unicode_literals
+
 import tweepy
 import json
 
@@ -14,7 +16,7 @@ def tweets_palavra(api, palavra_chave):
     "Procura tweets sobre uma palavra_chave"
     tweets = []
     for tweet in api.search(palavra_chave):
-        tweets.append(tweet.text)
+        tweets.append(tweet)
 
     return tweets
 
@@ -24,7 +26,7 @@ def autenticacao(dic_aut):
 	autenticacao.set_access_token(dic_aut['token'], dic_aut['token_senha'])
 
 	return autenticacao
-	
+
 def main():
     """Provem interação com a API do twitter"""
     with open('auth.json', 'r') as a:
@@ -35,8 +37,11 @@ def main():
     palavra_chave = raw_input('Digite a palavra-chave: ')
     tweets = tweets_palavra(api, palavra_chave)
 
-    print tweets
+    for tweet in tweets:
+        print(tweet.text)
+        print()
 
+    return tweets
 
 if __name__ == "__main__":
     main()
