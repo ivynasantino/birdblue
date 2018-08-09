@@ -1,9 +1,0 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-from __future__ import print_functions, unicode_literals
-
-from analisador_de_sentimentos import twitter_data, graphs
-
-
-print('DONE')
