@@ -2,6 +2,7 @@
 
 from __future__ import print_function, unicode_literals
 
+from textblob import TextBlob
 import tweepy
 import json
 
@@ -16,7 +17,9 @@ def tweets_palavra(api, palavra_chave):
     "Procura tweets sobre uma palavra_chave"
     tweets = []
     for tweet in api.search(palavra_chave):
-        tweets.append(tweet)
+        sentiment = TextBlob(tweet.text).sentiment.polarity
+        tupla_tweet = (tweet, sentiment)
+        tweets.append(tupla_tweet)
 
     return tweets
 
