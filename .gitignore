@@ -3,3 +3,4 @@
 *.egg-info
 analisador-de-sentimentos/auth.json
 api-study/
+.idea
