@@ -3,7 +3,29 @@
 
 from __future__ import print_function, unicode_literals
 
-from analisador_de_sentimentos import twitter_data, graphs
+import os
+
+from analisador_de_sentimentos import twitter_data, graphs, script_geracsv, auth_handler
+
+def main():
+    api = twitter_data.api_creator()
+
+    palavra_chave = raw_input('Digite a palavra-chave: ')
+
+    tweets = twitter_data.tweets_palavra(api, palavra_chave)
+
+    cabecalho = ['id_tt',
+                 'sentimento',
+                 'id_usuario',
+                 'texto',
+                 'data',
+                 'retweet',
+                 'retweet_num',
+                 'idioma']
+
+    script_geracsv.adicionaDados(palavra_chave, tweets, cabecalho)
 
 
-print('DONE')
+if __name__ == '__main__':
+    main()
+
